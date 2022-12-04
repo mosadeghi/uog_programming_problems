@@ -5,20 +5,19 @@ int main(){
 	int n;
 	cin >> n;
 
-    int a = 1;
+    int a;
 	int b = 1;
-	
-	for (int i=1; i<=n; i++){
-		if (i > b){
-			int temp = a + b;
-			a = b;
-			b = temp;
-		}
+	int c = 1;
 
-		if (i == b)
-			cout << "+";
-		else
-			cout << "-";
+	for (int i=1; i<=n; i++){
+		if (i == c){
+            cout << '+';
+
+            // calculating next fib
+            a = b;
+            b = c;
+            c = a + b;
+        } else
+            cout << '-';
 	}
-	
 }
